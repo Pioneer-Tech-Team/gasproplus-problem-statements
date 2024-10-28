@@ -1,3 +1,17 @@
+## First task
+
+I've written all SQL queries in `Postgres.session.sql`. You can execute this
+file by using this command:
+
+```
+PGPASSWORD=postgres psql -U postgres -h localhost -d gasproplus-accounts -q -t -f Postgres.session.sql > output.txt
+```
+
+Modify the host, database, user and password to your needs. The output is stored
+in output.txt.
+
+---
+
 # Turborepo starter
 
 This is an official starter Turborepo.

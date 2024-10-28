@@ -1,0 +1,59 @@
+
+Accounts table schema
+
+ id          | integer   |                          | NO          | 
+ parent_id   | integer   |                          | YES         | 
+ is_group    | boolean   |                          | YES         | 
+ name        | text      |                          | NO          | 
+
+
+Accounts table data
+
+  1 | Assets                         |           | t
+  2 | Liability                      |           | t
+  3 | Income                         |           | t
+  4 | Expenses                       |           | t
+  5 | Cash                           |         1 | f
+  6 | Bank                           |         1 | t
+  7 | Bank of India                  |         6 | f
+  8 | ICICI                          |         6 | f
+  9 | HDFC                           |         6 | f
+ 10 | Loans                          |         2 | t
+ 11 | Bank Loans                     |        10 | t
+ 12 | Bank of Baroda A/c no 24136589 |        11 | f
+ 13 | ICICI Bank A/c no 334968531666 |        11 | f
+
+
+View ordered by hierarchy
+
+  1 |           | t        | Assets
+  5 |         1 | f        | Cash
+  6 |         1 | t        | Bank
+  7 |         6 | f        | Bank of India
+  8 |         6 | f        | ICICI
+  9 |         6 | f        | HDFC
+  2 |           | t        | Liability
+ 10 |         2 | t        | Loans
+ 11 |        10 | t        | Bank Loans
+ 12 |        11 | f        | Bank of Baroda A/c no 24136589
+ 13 |        11 | f        | ICICI Bank A/c no 334968531666
+  3 |           | t        | Income
+  4 |           | t        | Expenses
+
+
+View with visual representation of hierarchy
+
+ Assets
+         Cash
+         Bank
+                 Bank of India
+                 ICICI
+                 HDFC
+ Liability
+         Loans
+                 Bank Loans
+                         Bank of Baroda A/c no 24136589
+                         ICICI Bank A/c no 334968531666
+ Income
+ Expenses
+
